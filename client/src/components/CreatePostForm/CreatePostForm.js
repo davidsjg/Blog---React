@@ -28,4 +28,41 @@ function CreatePostForm() {
     titleRef.current.value = "";
     bodyRef.current.value = "";
   };
+
+  return (
+    <div>
+      <div className="jumbotron">
+        <img
+          className="img-fluid img-thumbnail"
+          src="https://www.artmarketstudies.org/wp-content/uploads/2016/10/blogging.jpg"
+        />
+      </div>
+      <h1>Create a blog post</h1>
+      <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
+        <input
+          className="form-control mb-5"
+          required
+          ref={titleRef}
+          placeholder="Title"
+        />
+        <textarea
+          className="form-control mb-5"
+          required
+          ref={BodyRef}
+          placeholder="Screen name"
+        />
+        <input
+          className="form-control mb-5"
+          ref={authorRef}
+          placeholder="screen name"
+        />
+        <button
+          className="btn btn-success mt-3 mb-5"
+          disabled={state.loading}
+          type="submit"
+        />
+        Save Post!
+      </form>
+    </div>
+  );
 }
