@@ -93,11 +93,14 @@ const StoreProvider = ({ value = [], ...props }) => {
     loading: false,
   });
 
+  // if any extra props are threaded through, make sure they are available too.  this is why we improve props
   return <Provider value={[state, dispatch]} {...props} />;
 };
 
+//allow our components to be consumers
 const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
+// StoreProvider wraps around js components, consumers will imort and use useStoreContext
 export { StoreProvider, useStoreContext };
