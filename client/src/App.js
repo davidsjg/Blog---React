@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Favorites } from "./pages/Favorites/Favorites";
 import { Home } from "./pages/Home/Home";
-import { Nav } from "./pages/Nav/Nav";
+import { Nav } from "./components/Nav/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import { Detail } from "./pages/Detail/Detail";
 
