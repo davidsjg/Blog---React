@@ -3,7 +3,10 @@ import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 
 function Nav() {
+  //give us access to all the values that are in store
   const [store] = useStoreContext();
+
+  //if store.loading is truthy, create a tag.  otherwise insert react fragment
 
   return (
     <>
@@ -11,6 +14,7 @@ function Nav() {
         <a className="navbar-brand" href="/">
           BLOGGING IS TIGHT!!!
         </a>
+
         {store.loading ? (
           <a className="navbar-brand ml-auto">Loading.....</a>
         ) : (
