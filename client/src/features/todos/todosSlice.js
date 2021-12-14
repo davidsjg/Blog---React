@@ -32,8 +32,42 @@ export default function todosReducer(state = initialState, action) {
         };
       });
     }
+    case "todos/colorSelected": {
+      let { color, todoId } = action.payload;
+      return state.map((todo) => {
+        if (todo.id !== todoId) {
+          return todo;
+        }
+
+        return {
+          ...todo,
+          color,
+        };
+      });
+    }
+    case "todos/todoDeleted": {
+      return state.filter((todo) => todo.id !== action.payload);
+    }
+    case "todos/allCompleted": {
+      return state.map((todo) => {
+        return {
+          ...todo,
+          completed: true,
+        };
+      });
+    }
+    case "todos/completedCleared": {
+      return state.filter((todo) => !todo.completed);
+    }
 
     default:
       return state;
   }
 }
+
+// {type: 'todos/todoAdded', payload: todoText}
+// {type: 'todos/todoToggled', payload: todoId}
+// {type: 'todos/colorSelected, payload: {todoId, color}}
+// {type: 'todos/todoDeleted', payload: todoId}
+// {type: 'todos/allCompleted'}
+// {type: 'todos/completedCleared'}
