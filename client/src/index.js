@@ -15,18 +15,18 @@ const unsubscribe = store.subscribe(() => {
 
 //dispatch actions
 store.dispatch({ type: "todos/todoAdded", payload: "Learn about actions" });
-store.dispatch({ type: "todos/todoAdded", payload: "Learn about reducers" });
-store.dispatch({ type: "todos/todoAdded", payload: "Learn about stores" });
+// store.dispatch({ type: "todos/todoAdded", payload: "Learn about reducers" });
+// store.dispatch({ type: "todos/todoAdded", payload: "Learn about stores" });
 
-store.dispatch({ type: "todos/todoToggled", payload: 0 });
-store.dispatch({ type: "todos/todoToggled", payload: 1 });
+// store.dispatch({ type: "todos/todoToggled", payload: 0 });
+// store.dispatch({ type: "todos/todoToggled", payload: 1 });
 
-store.dispatch({ type: "filters/statusFilterChanged", payload: "completed" });
+// store.dispatch({ type: "filters/statusFilterChanged", payload: "completed" });
 
-store.dispatch({
-  type: "filters/colorFilterChanged",
-  payload: { color: "Red", changeType: "added" },
-});
+// store.dispatch({
+//   type: "filters/colorFilterChanged",
+//   payload: { color: "Red", changeType: "added" },
+// });
 
 unsubscribe();
 

@@ -8,7 +8,7 @@ export const sayHiOnDispatch = (createStore) => {
       return result;
     }
 
-    return { ...state, dispatch: newDispatch };
+    return { ...store, dispatch: newDispatch };
   };
 };
 
