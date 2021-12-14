@@ -1,7 +1,10 @@
 [
     {
-        "title": "clean fridge",
-        "content": "Need to clean the fridge"
+        "id": "1",
+        "text": "Clean the Fridge",
+        "completed": false,
+        "color": "Red"
     }
 
 ]
+
