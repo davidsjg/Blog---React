@@ -42,6 +42,7 @@ export default function todosReducer(state = initialState, action) {
       });
     }
     case "todos/todoDeleted": {
+      console.log(action.payload);
       return state.filter((todo) => todo.id !== action.payload);
     }
     case "todos/allCompleted": {

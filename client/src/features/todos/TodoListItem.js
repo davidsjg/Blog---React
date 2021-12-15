@@ -3,7 +3,10 @@ import React from "react";
 function TodoListItem({ todo }) {
   return (
     <div>
-      <p>{todo.text}</p>
+      <p>
+        <span>Title: </span>
+        {todo.text} <span>:: id: {todo.id}</span>
+      </p>
     </div>
   );
 }
