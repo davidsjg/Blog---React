@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
+import TodoList from "../../features/todos/TodoList.js";
 
 function Home() {
   const handleSubmit = (data) => {};
@@ -22,6 +23,9 @@ function Home() {
             <button type="submit">Enter Todo</button>
           </div>
         </form>
+        <div className={["todoList"]}>
+          <TodoList />
+        </div>
       </div>
     </>
   );
