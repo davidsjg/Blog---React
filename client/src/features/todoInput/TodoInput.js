@@ -29,7 +29,7 @@ function TodoInput() {
     if (e.key === "Enter" && trimmedText) {
       // dispatch({ type: "todos/todoAdded", payload: trimmedText });
       handleClick(trimmedText);
-      // setText("");
+      setText("");
     }
   };
   const handleKeyDown2 = (e) => {
@@ -40,7 +40,7 @@ function TodoInput() {
     if (e.key === "Enter" && trimmedText) {
       // dispatch({ type: "todos/todoAdded", payload: trimmedText });
       handleClick2(parseInt(trimmedText));
-      // setText("");
+      setPostId("");
     }
   };
 
