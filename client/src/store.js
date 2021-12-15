@@ -1,7 +1,12 @@
 import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "./reducer";
-import { print1, print2, print3 } from "./exampleAddons/middleware";
+import {
+  print1,
+  print2,
+  print3,
+  loggerMiddleware,
+} from "./exampleAddons/middleware";
 
 import {
   sayHiOnDispatch,
@@ -12,11 +17,7 @@ const middlewareEnhancer = applyMiddleware(print1, print2, print3);
 
 // const composedEnhancer = compose(sayHiOnDispatch, includeMeaningOfLife);
 
-const composedEnhancer = composeWithDevTools(
-  sayHiOnDispatch,
-  includeMeaningOfLife,
-  applyMiddleware(print1, print2, print3)
-);
+const composedEnhancer = composeWithDevTools(applyMiddleware(loggerMiddleware));
 
 let preloadedState = {
   todos: [{ id: 0, text: "Learn Redux", completed: false, color: "purple" }],

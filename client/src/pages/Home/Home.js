@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
 import TodoList from "../../features/todos/TodoList.js";
+import TodoInput from "../../features/todoInput/TodoInput";
 
 function Home() {
   const handleSubmit = (data) => {};
@@ -13,7 +14,7 @@ function Home() {
           <p>Enter a todo item:</p>
           <div>
             <p>Todo Title</p>
-            <input type="text" className="todoName" />
+            <TodoInput />
           </div>
           <div>
             <p>Todo Content</p>

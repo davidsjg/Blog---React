@@ -15,7 +15,7 @@ import store from "./store";
 // });
 
 //dispatch actions
-// store.dispatch({ type: "todos/todoAdded", payload: "Learn about actions" });
+store.dispatch({ type: "todos/todoAdded", payload: "Learn about actions" });
 // store.dispatch({ type: "todos/todoAdded", payload: "Learn about reducers" });
 // store.dispatch({ type: "todos/todoAdded", payload: "Learn about stores" });
 
